@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Pablo's stuff</title>
+		<link rel="shortcut icon" href="assets/favicons.ico/favicon.ico">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/circleStyles.css">
+		<script src="js/main.js"></script>
+		<script src="js/EPPZScroll.js"></script>
+	</head>
+
+	<body onload="init()" onclick="checkShowfull()" onscroll="scrollEvt()">
+
+		<label class="roundBtn hidden" id="backToTopBtn" onclick="EPPZScrollTo.scrollVerticalToElementById('introDiv', 0)">
+			<span id="upBtn">Home</span></label>
+
+		<div id="introDiv" class="introTxt">
+			<div class="lineAnim largerTxt hidden"> Hi. I'm Pablo. I make stuff.</div>
+			<div class="lineAnim hidden"> I usually make stuff with
+				computers and bacteria. </div>
+			<div class="lineAnim hidden"> Sometimes I make stuff with
+				violins and pencils. </div>
+			<div class="lineAnim hidden"> I like making stuff that helps
+				understand how living things work and how they cause disease. </div>
+			<div class="lineAnim hidden"> This is where I show the stuff
+				I make. Except the bacteria. They're trickier to upload. </div>
+		</div>
+
+		<div id="menuContainer">
+			<div id='warped' class="hidden">
+				<span class='w0'><a class="goToResearch" onmouseout="lightDown('Research')" onmouseover="lightUp('Research')" onclick="goTo('Research')">R</a></span><span class='w1'><a class="goToResearch" onmouseout="lightDown('Research')" onmouseover="lightUp('Research')" onclick="goTo('Research')">e</a></span><span class='w2'><a class="goToResearch" onmouseout="lightDown('Research')" onmouseover="lightUp('Research')" onclick="goTo('Research')">s</a></span><span class='w3'><a class="goToResearch" onmouseout="lightDown('Research')" onmouseover="lightUp('Research')" onclick="goTo('Research')">e</a></span><span class='w4'><a class="goToResearch" onmouseout="lightDown('Research')" onmouseover="lightUp('Research')" onclick="goTo('Research')">a</a></span><span class='w5'><a class="goToResearch" onmouseout="lightDown('Research')" onmouseover="lightUp('Research')" onclick="goTo('Research')">r</a></span><span class='w6'><a class="goToResearch" onmouseout="lightDown('Research')" onmouseover="lightUp('Research')" onclick="goTo('Research')">c</a></span><span class='w7'><a class="goToResearch" onmouseout="lightDown('Research')" onmouseover="lightUp('Research')" onclick="goTo('Research')">h</a></span>
+				<span class='w8'> </span><span class='w9'> </span><span class='w10'> </span><span class='w11'> </span><span class='w12'> </span><span class='w13'> </span><span class='w14'> </span><span class='w15'> </span><span class='w16'> </span><span class='w17'> </span><span class='w18'></span>
+
+				<span class='w19'><a class="goToCode" onmouseout="lightDown('Code')" onmouseover="lightUp('Code')" onclick="goTo('Code')">C</a></span><span class='w20'><a class="goToCode" onmouseout="lightDown('Code')" onmouseover="lightUp('Code')" onclick="goTo('Code')">o</a></span><span class='w21'><a class="goToCode" onmouseout="lightDown('Code')" onmouseover="lightUp('Code')" onclick="goTo('Code')">d</a></span><span class='w22'><a class="goToCode" onmouseout="lightDown('Code')" onmouseover="lightUp('Code')" onclick="goTo('Code')">e</a></span>
+				<span class='w23'> </span><span class='w24'> </span><span class='w25'> </span><span class='w26'> </span><span class='w27'> </span><span class='w28'> </span><span class='w29'> </span><span class='w30'> </span><span class='w31'> </span><span class='w32'> </span><span class='w33'> </span><span class='w34'></span>
+
+				<span class='w35'><a class="goToArt" onmouseout="lightDown('Art')" onmouseover="lightUp('Art')" onclick="goTo('Art')">A</a></span><span class='w36'><a class="goToArt" onmouseout="lightDown('Art')" onmouseover="lightUp('Art')" onclick="goTo('Art')">r</a></span><span class='w37'><a class="goToArt" onmouseout="lightDown('Art')" onmouseover="lightUp('Art')" onclick="goTo('Art')">t</a></span>
+				<span class='w38'> </span><span class='w39'> </span><span class='w40'> </span><span class='w41'> </span><span class='w42'> </span><span class='w43'> </span><span class='w44'> </span><span class='w45'> </span><span class='w46'> </span><span class='w47'> </span><span class='w48'> </span><span class='w49'></span>
+
+				<span class='w50'><a class="goToMusic" onmouseout="lightDown('Music')" onmouseover="lightUp('Music')" onclick="goTo('Music')">M</a></span><span class='w51'><a class="goToMusic" onmouseout="lightDown('Music')" onmouseover="lightUp('Music')" onclick="goTo('Music')">u</a></span><span class='w52'><a class="goToMusic" onmouseout="lightDown('Music')" onmouseover="lightUp('Music')" onclick="goTo('Music')">s</a></span><span class='w53'><a class="goToMusic" onmouseout="lightDown('Music')" onmouseover="lightUp('Music')" onclick="goTo('Music')">i</a></span><span class='w54'><a class="goToMusic" onmouseout="lightDown('Music')" onmouseover="lightUp('Music')" onclick="goTo('Music')">c</a></span>
+				<span class='w55'> </span><span class='w56'> </span><span class='w57'> </span><span class='w58'> </span><span class='w59'> </span><span class='w60'> </span><span class='w61'> </span><span class='w62'> </span><span class='w63'> </span><span class='w64'> </span><span class='w65'></span>
+
+				<span class='w66'><a class="goToProfiles" onmouseout="lightDown('Profiles')" onmouseover="lightUp('Profiles')" onclick="goTo('Profiles')">P</a></span><span class='w67'><a class="goToProfiles" onmouseout="lightDown('Profiles')" onmouseover="lightUp('Profiles')" onclick="goTo('Profiles')">r</a></span><span class='w68'><a class="goToProfiles" onmouseout="lightDown('Profiles')" onmouseover="lightUp('Profiles')" onclick="goTo('Profiles')">o</a></span><span class='w69'><a class="goToProfiles" onmouseout="lightDown('Profiles')" onmouseover="lightUp('Profiles')" onclick="goTo('Profiles')">f</a></span><span class='w70'><a class="goToProfiles" onmouseout="lightDown('Profiles')" onmouseover="lightUp('Profiles')" onclick="goTo('Profiles')">i</a></span><span class='w71'><a class="goToProfiles" onmouseout="lightDown('Profiles')" onmouseover="lightUp('Profiles')" onclick="goTo('Profiles')">l</a></span><span class='w72'><a class="goToProfiles" onmouseout="lightDown('Profiles')" onmouseover="lightUp('Profiles')" onclick="goTo('Profiles')">e</a></span><span class='w73'><a class="goToProfiles" onmouseout="lightDown('Profiles')" onmouseover="lightUp('Profiles')" onclick="goTo('Profiles')">s</a></span>
+				<span class='w74'></span>
+			</div>
+		</div>
+
+		<div id="Research" class="text">
+			<span class="largerTxt">Research</span>
+			<ul>
+				<li><span class="hand">Cárdenas, P.</span>, Tapia, J., Umaña, J.D., Bravo, C., Rengifo Ibáñez, C., Cordovez Álvarez, J. (2016). <i>Optimizing Snakebite Antivenom Distribution in Colombia</i>. Oral presentation at the <a target="_blank" href="https://sib.uniandes.edu.co/">Eighth International Seminar of Biomedical Engineering</a>, Bogotá, April 20-22, 2016. Proceedings available <a target="_blank" href="https://sib.uniandes.edu.co/images/Memorias_SIB_uniandes_2016.pdf">here</a>.
+				<li>Tapia, J., Bravo, C., Umaña, J.D., <span class="hand">Cárdenas, P.</span> (2015). <i>Algorithm for Antivenom Distribution</i>. Poster at the <a target="_blank" href="http://matematicas.uniandes.edu.co/eventos/2015/WD/">Second International & Interdisciplinary Workshop on Mathematical Modeling, Ecology, Evolution and Dynamics of Dengue and Related Diseases (IIWEE)</a>, Villa de Leyva, August 31–September 4, 2015. Workshop program available <a target="_blank" href="https://cloud.sagemath.com/#projects/d4953818-6ac5-4aca-beec-babc8a83dc50/files/1_Program.pdf">here</a>.
+				<li>Ochoa Cruz, E. A., Shome, S., <span class="hand">Cárdenas, P.</span>, Yelleswarapu, M., Kumar Gupta, J., Battaglia, E.M., Ngom, A., Fernandez, P., & Moe-Behrens, G. (2015). Bioinformatics for Aspiring Synthetic Biologists. <i>Biocoder</i>(7). O’Reilly Media. Available <a target="_blank" href="http://www.oreilly.com/biocoder/issues/BioCoderSpring2015.pdf">here</a>.
+				<li><span class="hand">Cárdenas, P.</span>, Yelleswarapu, M., Shome, S., Kumar Gupta, J., Battaglia, E.M., Fernandez, P., Ngom, A., & Moe-Behrens, G. (2014). Leukippos: a synthetic biology lab in the cloud. <i>Biocoder</i>(4). O’Reilly Media. Available <a target="_blank" href="http://chimera.labs.oreilly.com/books/1234000002036/ch03.html">here</a>.
+				<li>Attended the 2014 iGEM Giant Jamboree (Boston, Oct. 30-Nov. 3); co-presented Team Colombia’s <a target="_blank" href="http://2014.igem.org/Team:Colombia">project</a>.
+				<li><span class="hand">Cárdenas, P.</span>, Shome, S., Fernandes, P., Moe-Behrens, G., & Ngom, A. (2013). <i>SynBio App Selector: An Application Selection Engine for Synthetic Biology</i>. Poster at the 5th International Workshop on Bio-Design Automation, London, 12-13 June 2013. Proceedings available <a target="_blank" href="http://www.iwbdaconf.org/2013/proceedings/IWBDA13_Proceedings.pdf">here</a>.
+				<li>Shome, S., <span class="hand">Cárdenas, P.</span>, Fernandes, P., Ngom, A., & Moe-Behrens, G. (2013). <i>SynBrick: A Crowdsourcing Game for Synthetic Biology</i>. Poster at the 5th International Workshop on Bio-Design Automation, London, 12-13 June 2013. Proceedings available <a target="_blank" href="http://www.iwbdaconf.org/2013/proceedings/IWBDA13_Proceedings.pdf">here</a>.
+				<li><i>Open science and translational research</i>. (2013). An excessively lengthy argument stating that science must be democratized in order to close the translational gap between basic research and public benefit, complete with cases studies and field work. Available in Spanish <a target="_blank" href="http://cienciaabierta.pancakeapps.com/">here</a>.
+			</ul>
+		</div>
+
+		<div id="Code" class="text">
+			<span class="largerTxt">Code</span>
+			<ul>
+				<li><b><i><span class="hand"><a target="_blank" href="http://genetargeter.herokuapp.com/">GeneTargeter</a></i></b></span>. (2016). <b>Computational DNA design</b> tool used to automate the design of DNA constructs used to introduce synthetic gene regulation elements into Plasmodium falciparum as used in the Niles Lab at MIT. Source code <a target="_blank" href="https://github.com/pablocarderam/genetargeter">on Github</a>.
+				<li><b><i><span class="hand">Spatial Evolution Model</i></b></span>. (2016). <b>Spatially explicit simulation</b> studying the evolution of antibiotic resistance from a group selection point of view as an emerging behavior from spatial dynamics. Developed with the help of Juan Sebastián Andrade, Laura Forero, and Andrea Velásquez. Source code <a target="_blank" href="https://github.com/pablocarderam/BacterialResistance">on Github</a>.
+				<li><b><i><span class="hand"><a target="_blank" href="http://pablocarderam.github.io/CompetitiveLotkaVolterra/">Lotka-Volterra Simulator</a></i></b></span>. (2016). <b>Visualizes competitive Lotka-Volterra dynamics</b> between two species using a fourth-order Runge-Kutta algorithm. Source available <a target="_blank" href="https://github.com/pablocarderam/CompetitiveLotkaVolterra">on Github</a>.
+				<li><b><i><span class="hand">Wadjet</i></b></span>. (2015) <b>Predictive epidemiological model</b> used to forecast the number of snakebites in each department in Colombia, as well as the number and cost of the antivenom doses needed to cover them. Developed with the help of Lucía Pérez Herrera, Camilo Pérez Martínez, Luisa Vargas Daza and Sara Nieto Díaz. R/Java source code available <a target="_blank" href="https://github.com/pablocarderam/Wadjet">on Github</a>.
+				<li><b><i><span class="hand">Muscle Model</i></b></span>. (2015). <b>Stochastic model</b> of skeletal muscle force dynamics. Source available <a target="_blank" href="https://github.com/pablocarderam/MuscleModel">on Github</a>.
+				<li><b><i><span class="hand"><a target="_blank" href="http://pablocarderam.pancakeapps.com/PetriPage/main.html">PetriPage</a></i></b></span>. (2014). <b>Online evolution simulator</b> intended as an <i>in silico</i> exploration of the evolution of antibiotic resistance evolution. Source code <a target="_blank" href="https://github.com/pablocarderam/PetriPage">on Github</a>.
+				<li><b><i><span class="hand">Hookworm Energy Model</i></b></span>. (2014). <b>Simple stochastic simulation</b> of host energy loss due to <i>Ancylostoma duodenale</i> infection. Developed with Maria Alejandra Galeano, Laura Mejía and Santiago Mesa. Source code available <a target="_blank" href="https://github.com/pablocarderam/HookwormEnergyModel">on Github</a>.
+				<li><b><i><span class="hand"><a target="_blank" href="http://pablocarderam.pancakeapps.com/Biopensumdinamico/main.html">BioPensum</a></i></b></span>. (2013). <b>Simple web app</b> designed to help Universidad de Los Andes students majoring in biology and/or microbiology plan the courses they take to achieve graduation. Source <a target="_blank" href="https://github.com/pablocarderam/BioPensum"> on Github</a>.
+				<li><b><i><span class="hand"><a target="_blank" href="http://pablocarderam.pancakeapps.com/AppSelector-Fork1/main.html">SynBio App Selector</a></i></b></span>. (2013). <b>Prototype</b> of interactive resource base of synthetic biology-related software. Designed with the Leukippos Institute. Source code <a target="_blank" href="https://github.com/LeukipposInstitute/Leukippos-SynBioAppSelector">on Github</a>.
+			</ul>
+		</div>
+
+		<div id="Art" class="text">
+			<span class="largerTxt">Art</span>
+			<p>
+				<b><i><span class="hand"><a target="_blank" href="http://pablocarderam.github.io/close-open/">window.close() || window.open()</a></i></b></span><br> (2015). <b>Videogame-essay</b> on the role of art in the Internet age. Source code <a target="_blank" href="https://github.com/pablocarderam/close-open">on Github</a>.
+			</p>
+			<a target="_blank" href="http://pablocarderam.github.io/close-open/"><img alt="window.close()||window.open()" width="400px" src="assets/img/window.png"></a>
+			<br><br>
+
+			<p>
+				<b><i><span class="hand"><a target="_blank" href="http://revistaando.tumblr.com/post/109430780560/sobre-el-dibujo-por-pablo-c%C3%A1rdenas-parte-1#_=_">Sketches of Spain</a></i></b></span><br> (2015). <b>Pencil-drawn portrait series</b> with accompanying <b>essay on the nature of drawing</b> published by <i>Ando</i> online magazine.
+			</p>
+			<a target="_blank" href="http://revistaando.tumblr.com/post/109430780560/sobre-el-dibujo-por-pablo-c%C3%A1rdenas-parte-1#_=_"><img alt="Sketches of Spain" width="400px" src="assets/img/spain.png"></a>
+			<br><br>
+
+			<p>
+				<b><i><span class="hand"><a target="_blank" href="http://pablocarderam.github.io/Jack/">Jack, the Motivational Unicorn</a></i></b></span><br> (Spanish). (2014). Feel the rainbows. Made with <a target="_blank" href="http://www.valeriamontana.net/">Valeria Montaña</a> and a bunch of other people during the <a target="_blank" href="http://bogota.sciencehackday.org/">Bogotá Science Hack Day</a>. Source code <a target="_blank" href="https://github.com/pablocarderam/Jack">on Github</a>, for what it's worth...
+			</p>
+			<a target="_blank" href="http://pablocarderam.github.io/Jack/"><img alt="Jack" width="400px" src="assets/img/jack.png"></a>
+			<br><br>
+
+			<p>
+				<b><i><span class="hand"><a target="_blank" href="http://revistaelparcero.com/la-ciudad-cree-artista/">The City Thinks I'm an Artist</a></i></b></span><br> (Spanish). (2014). Short comic published by <i>El Parcero</i> online magazine.
+			</p>
+			<a target="_blank" href="http://revistaelparcero.com/la-ciudad-cree-artista/"><img alt="La ciudad me cree artista" width="400px" src="assets/img/ciudad.png"></a>
+		</div>
+
+		<div id="Music" class="text">
+			<span class="largerTxt">Music</span>
+			<p>
+				<b><i><span class="hand">Dos años </span></i></b>(2016): An album collecting two years of music recorded using iPads, electric violin & the occasional ocarina.
+			</p>
+			<p><iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2884925257/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/" seamless><a href="http://pablocr.bandcamp.com/album/dos-a-os">Dos años by Pablo CR</a></iframe></p>
+			<p><iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/181713075&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe></p>
+			<p>
+				Live recording of <b><i><span class="hand">Cementerio central </span></i></b> (2016), one of the tracks on the album:
+			</p>
+			<p><iframe width="500" height="315" src="https://www.youtube.com/embed/VdngYIxVxfM" frameborder="0" allowfullscreen></iframe></p>
+			<br>
+			<p>
+				<b><i><span class="hand">Salmo del Pescador </span></i></b>(2016): John Coltrane's Psalm meets traditional Colombian cumbia music.
+			</p>
+			<p><iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/285627607&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe></p>
+			<p><iframe width="500" height="315" src="https://www.youtube.com/embed/a6Dx5ASJr2g" frameborder="0" allowfullscreen></iframe></p>
+		</div>
+
+		<div id="Profiles" class="text">
+			<span class="largerTxt">Profiles</span>
+			<br><br><br><br>
+			<p><b><span class="profileTxt"><a target="_blank" href="https://github.com/pablocarderam">Github</a></span></b></p>
+			<br><br>
+			<p><b><span class="profileTxt"><a target="_blank" href="https://soundcloud.com/pablo-c-rdenas">Soundcloud</a></span></b></p>
+			<br><br>
+			<p><b><span class="profileTxt"><a target="_blank" href="mailto:pablocarderam@gmail.com">pablocarderam@gmail.com</a></span></b></p>
+		</div>
+
+		<div id="Attributions">
+			<p>
+				This webpage's content is licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+				<br><br>
+				<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />
+			</p>
+			<br>
+			<p>
+				Its code is licensed under an <a target="_blank" href="https://opensource.org/licenses/MIT">MIT License</a> and can be found <a target="_blank" href="https://github.com/pablocarderam/pablos-stuff">on Github</a>.
+			</p>
+			<a target="_blank" href="https://opensource.org/"><img alt="Long live open source!" width="80px" src="assets/img/os.png"></a>
+		</div>
+
+		<div class="tailer"></div>
+	</body>
+</html>
