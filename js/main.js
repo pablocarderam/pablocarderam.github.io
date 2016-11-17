@@ -100,3 +100,5 @@ function lightDown(id) {
     letters[i].style.textShadow = "";
   }
 }
+
+init();
