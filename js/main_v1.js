@@ -3,9 +3,13 @@
 
 var backToTopShown = true; // used to control back-to-top button appearance and disappearance
 var initAnimRunning = true; // monitor whether or not initial anim is running
+var just_loaded = true;
 
 window.onbeforeunload = function () {
-  window.scrollTo(0, 40);
+  if (just_loaded) {
+    just_loaded = false;
+      window.scrollTo(0, 0);
+  }
 }
 
 function init() {
