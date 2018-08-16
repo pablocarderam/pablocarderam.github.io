@@ -122,10 +122,21 @@ function lightDown(id) {
 
 function randomizeSections() {
   section_indexes = shuffle(section_indexes);
+  var sep = "&nbsp;".repeat(5);
+  if (navigator.userAgent.search("Firefox") > -1) {
+    sep = "&emsp;".repeat(6)+"&nbsp;";
+  }
+  var menu_str = "";
   for (var i = 0; i < section_indexes.length; i++) {
     document.getElementById("section_"+i.toString()).innerHTML = section_contents[section_indexes[i]];
-    document.getElementById("menuItm_"+i.toString()).innerHTML = menu_contents[section_indexes[i]];
+    menu_str += menu_contents[section_indexes[i]] + sep;
   }
+  menu_str += "<a class=\"goToProfiles\" onmouseout=\"lightDown('Profiles')\" onmouseover=\"lightUp('Profiles')\" onclick=\"goTo('Profiles')\">Profiles</a>";
+  document.getElementById("menuItms").innerHTML = menu_str;
+  var rand_rot = "rotate(" + (Math.floor(Math.random()*360)).toString() + ",400,400)";
+  console.log(rand_rot);
+  document.getElementById("circlePath").setAttribute("transform",rand_rot);
+  document.getElementById("circle").setAttribute("transform",rand_rot);
 }
 
 init();
