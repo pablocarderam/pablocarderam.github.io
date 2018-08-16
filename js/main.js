@@ -4,9 +4,13 @@
 var backToTopShown = true; // used to control back-to-top button appearance and disappearance
 var initAnimRunning = true; // monitor whether or not initial anim is running
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 40);
+}
+
 function init() {
     document.getElementById("backToTopBtn").style.opacity = 0;
-    document.getElementById('warped').style.opacity = 0;
+    document.getElementById('circle').style.opacity = 0;
     EPPZScrollTo.scrollVerticalToElementById('introDiv', -10); // scroll to start at init
 
     var introLines = document.getElementById("introDiv").children; // get children
@@ -44,7 +48,7 @@ function showFull() {
 }
 
 function showMenuItems() {
-  fadeIn(document.getElementById('warped'));
+  fadeIn(document.getElementById('circle'));
 }
 
 // Makes back-to-top button appear if scrolled down and
@@ -98,6 +102,29 @@ function lightDown(id) {
   letters = document.getElementsByClassName('goTo'+id);
   for (var i = 0; i < letters.length; i++) {
     letters[i].style.textShadow = "";
+  }
+}
+
+/**
+ * Shuffles array in place.
+ * @param {Array} a items An array containing the items.
+ */
+ function shuffle(a) {
+     var j, x, i;
+     for (i = a.length - 1; i > 0; i--) {
+         j = Math.floor(Math.random() * (i + 1));
+         x = a[i];
+         a[i] = a[j];
+         a[j] = x;
+     }
+     return a;
+ }
+
+function randomizeSections() {
+  section_indexes = shuffle(section_indexes);
+  for (var i = 0; i < section_indexes.length; i++) {
+    document.getElementById("section_"+i.toString()).innerHTML = section_contents[section_indexes[i]];
+    document.getElementById("menuItm_"+i.toString()).innerHTML = menu_contents[section_indexes[i]];
   }
 }
 
