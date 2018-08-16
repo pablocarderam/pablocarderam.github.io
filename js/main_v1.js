@@ -8,7 +8,7 @@ var just_loaded = true;
 window.onbeforeunload = function () {
   if (just_loaded) {
     just_loaded = false;
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 40);
   }
 }
 
