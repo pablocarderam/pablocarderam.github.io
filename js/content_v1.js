@@ -48,25 +48,25 @@ var cont_science = "<div id=\"Science\" class=\"text\"> \
 var cont_art = "<div id=\"Art\" class=\"text\">\
   <span class=\"largerTxt\"><h1>Art</h1></span>\
   <p>\
-    <b><i><span class=\"hand\"><a target=\"_blank\" href=\"http://pablocarderam.github.io/close-open/\">window.close() || window.open()</a></i></b></span><br> (2015). <b>Videogame-essay</b> on the role of art in the Internet age. Source code <a target=\"_blank\" href=\"https://github.com/pablocarderam/close-open\">on Github</a>.\
+    <b><i><span class=\"hand\"><a target=\"_blank\" href=\"http://pablocarderam.github.io/close-open/\">window.close() || window.open()</a></i></b></span><br> (2015). <b>Videogame-essay</b> on the role of art in the Internet age (Spanish). Source code <a target=\"_blank\" href=\"https://github.com/pablocarderam/close-open\">on Github</a>.\
   </p>\
   <a target=\"_blank\" href=\"http://pablocarderam.github.io/close-open/\"><img alt=\"window.close()||window.open()\" width=\"400px\" src=\"assets/img/window.png\"></a>\
   <br><br>\
 \
   <p>\
-    <b><i><span class=\"hand\"><a target=\"_blank\" href=\"http://revistaando.tumblr.com/post/109430780560/sobre-el-dibujo-por-pablo-c%C3%A1rdenas-parte-1#_=_\">Sketches of Spain</a></i></b></span><br> (2015). <b>Pencil-drawn portrait series</b> with accompanying <b>essay on the nature of drawing</b> published by <i>Ando</i> online magazine.\
+    <b><i><span class=\"hand\"><a target=\"_blank\" href=\"http://revistaando.tumblr.com/post/109430780560/sobre-el-dibujo-por-pablo-c%C3%A1rdenas-parte-1#_=_\">Sketches of Spain</a></i></b></span><br> (2015). <b>Pencil-drawn portrait series</b> with accompanying <b>essay on the nature of drawing</b> (Spanish) published by <i>Ando</i> online magazine.\
   </p>\
   <a target=\"_blank\" href=\"http://revistaando.tumblr.com/post/109430780560/sobre-el-dibujo-por-pablo-c%C3%A1rdenas-parte-1#_=_\"><img alt=\"Sketches of Spain\" width=\"400px\" src=\"assets/img/spain.png\"></a>\
   <br><br>\
 \
   <p>\
-    <b><i><span class=\"hand\"><a target=\"_blank\" href=\"http://pablocarderam.github.io/Jack/\">Jack, the Motivational Unicorn</a></i></b></span><br> (Spanish). (2014). Feel the rainbows. Made with <a target=\"_blank\" href=\"http://www.valeriamontana.net/\">Valeria Montaña</a> and a bunch of other people during the <a target=\"_blank\" href=\"http://bogota.sciencehackday.org/\">Bogotá Science Hack Day</a>. Source code <a target=\"_blank\" href=\"https://github.com/pablocarderam/Jack\">on Github</a>, for what it's worth...\
+    <b><i><span class=\"hand\"><a target=\"_blank\" href=\"http://pablocarderam.github.io/Jack/\">Jack, the Motivational Unicorn</a></i></b></span><br> (2014). Feel the rainbows (Spanish). Made with <a target=\"_blank\" href=\"http://www.valeriamontana.net/\">Valeria Montaña</a> and a bunch of other people during the <a target=\"_blank\" href=\"http://bogota.sciencehackday.org/\">Bogotá Science Hack Day</a>. Source code <a target=\"_blank\" href=\"https://github.com/pablocarderam/Jack\">on Github</a>, for what it's worth...\
   </p>\
   <a target=\"_blank\" href=\"http://pablocarderam.github.io/Jack/\"><img alt=\"Jack\" width=\"400px\" src=\"assets/img/jack.png\"></a>\
   <br><br>\
 \
   <p>\
-    <b><i><span class=\"hand\"><a target=\"_blank\" href=\"http://revistaelparcero.com/la-ciudad-cree-artista/\">The City Thinks I'm an Artist</a></i></b></span><br> (Spanish). (2014). Short comic published by <i>El Parcero</i> online magazine.\
+    <b><i><span class=\"hand\"><a target=\"_blank\" href=\"http://revistaelparcero.com/la-ciudad-cree-artista/\">The City Thinks I'm an Artist</a></i></b></span><br> (2014). Short comic published by <i>El Parcero</i> online magazine (Spanish).\
   </p>\
   <a target=\"_blank\" href=\"http://revistaelparcero.com/la-ciudad-cree-artista/\"><img alt=\"La ciudad me cree artista\" width=\"400px\" src=\"assets/img/ciudad.png\"></a>\
 </div>";
