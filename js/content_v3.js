@@ -13,7 +13,13 @@ var menu_titles = ["Art","Code","Music","Science","Writing"];
 
 var cont_music = "<div id=\"Music\" class=\"text\"> \
   <span class=\"largerTxt\"><h1>Music</h1></span> \
-  <p><iframe width=\"100%\" height=\"300\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/13940020&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true\"></iframe></p> \
+  <p> \
+    <b><i><span class=\"hand\">Bitcrushed Spirits</span></i></b> (2019): a collaboration with Connie Michelle-Molina on pixel art and ambient music. On <a target=\"_blank\" href=\"https://www.youtube.com/channel/UCIb65NqRMH36nWUIoX-UO3g\">YouTube</a>, <a target=\"_blank\" href=\"https://bitcrushed-spirits.newgrounds.com/\">Newgrounds</a>, and Soundcloud:\
+  </p> \
+  <p> \
+  <iframe width=\"100%\" height=\"300\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/538701495&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true\"></iframe> \
+  </p> \
+  <p><b><i><span class=\"hand\">Miscellaneous music</span></i></b> (2014-2019): </p><p><iframe width=\"100%\" height=\"300\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/13940020&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true\"></iframe></p> \
   <p> \
     <b><i><span class=\"hand\">Funkprints </span></i></b>(2016): 4/4 funk arrangement of Wayne Shorter's jazz standard, Footprints. Sheet music available <a href=\"assets/stuff/Funkprints.pdf\" target=\"blank\">here</a>. \
   </p> \
@@ -90,6 +96,9 @@ var cont_code = "<div id=\"Code\" class=\"text\">\
 
 var cont_writing = "<div id=\"Writing\" class=\"text\">\
   <span class=\"largerTxt\"><h1>Writing</h1></span>\
+  <ul>\
+    <li><i>labSquared: A laboratory laboratory</i>. (2020). A science manifesto, a thought-experiment on doing experiments, an exercise exploring possible futures for science and research. Available <a target=\"_blank\" href=\"https://lab-squared.github.io/\">here</a>.\
+  </ul>\
   <ul>\
     <li><i>Open science and translational research</i>. (2013). An excessively lengthy argument stating that science must be democratized in order to close the translational gap between basic research and public benefit, complete with cases studies and field work. Available in Spanish <a target=\"_blank\" href=\"https://docs.google.com/document/d/e/2PACX-1vRpCuxhDoDftpF9mbJ9gBsBIyxZ_FVkD_tyhmDCSg1HCVNV0CmLoNex0W4jFl-LiiiUNOiepuj4jv34/pub\">here</a>.\
   </ul>\
