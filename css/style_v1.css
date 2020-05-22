@@ -21,79 +21,42 @@
 body {
 	min-width:600px;
 	margin: 0;
-	font-family: 'Reenie Beanie', 'Reenie Beanie local', sans-serif;
-  font-size: 20px;
+	font-family: 'Cabin', 'Cabin local', sans-serif;
+  font-size: 18px;
   color: #3C3C3C;
 	text-align: center;
 	background: linear-gradient(#EEDCAA, #ECBD3A);
-}
-
-h1 {
-	font-size: inherit;
+	z-index: -1;
 }
 
 a {
 	text-decoration: none;
-	color: inherit;
+	color: #002381;
 }
 
 a:hover {
 	cursor: pointer;
+	text-shadow: 0px 0px 15px #002381;
 }
 
 p {
 	width: 500px;
 	margin: auto;
 	padding: 10px;
-}
-
-.introTxt {
-	font-family: 'Reenie Beanie', 'Reenie Beanie local', sans-serif;
-	width: 500px;
-	position: absolute;
-	margin: auto;
-	left: 0;
-	right: 0;
-	font-size: 25px;
-	padding: 250px;
+	text-align: left;
 }
 
 .largerTxt {
-	font-size: 28px;
-	font-family: 'Homemade Apple', 'Cabin local', sans-serif;
-}
-
-.roundBtn {
-	border: 6px solid #EEDCAA;
-	width: 50px;
-	height: 50px;
-	font-family: "Reenie Beanie", "Reenie Beanie local", sans-serif;
 	font-size: 30px;
-  border-radius: 100%;
-  background: #ECBD3A;
-	cursor: pointer;
-	position: fixed;
-	top: 80%;
-	left: 48%;
-	display: inline-block;
-}
-.roundBtn:hover {
-    border: 6px solid #F2E5BF;
-}
-.roundBtn:active {
-    background: #CFA533;
-		border: 6px solid #F2E5BF;
+	font-weight: bold;
+	font-family: 'Homemade Apple', 'Homemade Apple local', 'Cabin local', sans-serif;
+	text-align: center;
 }
 
-#upBtn {
-	position: absolute;
-	top: 10px;
-	left: 2px;
-}
-
-.hidden {
-	display: none;
-	opacity: 0;
+h1 {
+	font-size: 30px;
+	font-weight: bold;
+	font-family: 'Homemade Apple', 'Homemade Apple local', 'Cabin local', sans-serif;
 }
 
 .lineAnim {
@@ -103,7 +66,7 @@ p {
 .text {
 	padding-bottom: 150px;
 	font-family: "Cabin", "Cabin local", sans-serif;
-	font-size: 15px;
+	font-size: 17px;
 	width: 500px;
 	margin: auto;
 }
@@ -113,46 +76,115 @@ p {
 }
 
 ul {
+	width: 400px;
+	margin: auto;
+	padding: 10px;
 	text-align: left;
-}
-
-li {
-	margin-bottom: 10px;
-}
-
-ul a {
-	color: #002381;
-}
-
-p a:hover {
-	text-shadow: 0px 0px 15px #002381;
-}
-
-p a {
-	color: #002381;
-}
-
-ul a:hover {
-	text-shadow: 0px 0px 15px #002381;
-}
-
-.hand {
-	font-family: "Reenie Beanie", "Reenie Beanie local", sans-serif;
-	font-size: 22px;
-	font-weight: bold;
-}
-
-.profileTxt {
-	font-family: "Reenie Beanie", "Reenie Beanie local", sans-serif;
-	font-size: 30px;
-	font-weight: bold;
-}
-
-#Attributions {
-	font-family: "Reenie Beanie", "Reenie Beanie local", sans-serif;
-	font-size: 20px;
 }
 
 #Attributions>p {
 	width: 300px;
+	text-align: center;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 40%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+	font-size: 40px;
+	text-align: center;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+	padding: 20px 20px 20px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+	text-align: center;
+}
+
+.main {
+  margin-left: 40%; /* Same as the width of the sidenav */
+	margin-top: 70vh; /* Same as the width of the sidenav */
+	-ms-transform: translate(0, -350px);
+  transform: translate(0, -350px);
+}
+.mainMob {
+	-ms-transform: translate(0, 110vh);
+  transform: translate(0, 110vh);
+}
+
+.align-left {
+	text-align: right;
+	position: absolute;
+	left: 50%;
+	-ms-transform: translate(-60%, 0%);
+  transform: translate(-60%, 0%);
+	font-weight: normal;
+	font-size: 23px;
+}
+
+.align-left a:hover {
+	text-shadow: 0px 0px 15px #002381;
+}
+
+.roundBtn {
+	border: 6px solid #EEDCAA;
+	width: 50px;
+	height: 50px;
+	font-family: "Homemade Apple", "Homemade Apple local", sans-serif;
+	font-size: 50px;
+  border-radius: 100%;
+  background: #ECBD3A;
+	cursor: pointer;
+	position: fixed;
+	top: 80%;
+	left: 68.25%;
+	display: inline-block;
+	z-index: 1;
+}
+.roundBtn:hover {
+    border: 6px solid #F2E5BF;
+}
+.roundBtn:active {
+    background: #CFA533;
+		border: 6px solid #F2E5BF;
+}
+#upBtn {
+	position: absolute;
+	top: -14px;
+	left: 14px;
+}
+
+.introTxt {
+	/* font-family: 'Reenie Beanie', 'Reenie Beanie local', sans-serif; */
+	/* width: 500px; */
+	/* position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	font-size: 25px;
+	padding: 250px;
+	margin-left: 40%; /* Same as the width of the sidenav */
+}
+
+.hidden {
+	display: none;
+	opacity: 0;
+}
+
+.lineAnim {
+	padding: 10px;
 }

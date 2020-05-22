@@ -4,6 +4,7 @@
 var backToTopShown = true; // used to control back-to-top button appearance and disappearance
 var initAnimRunning = true; // monitor whether or not initial anim is running
 var just_loaded = true;
+var mobile = false;
 
 window.onbeforeunload = function () {
   if (just_loaded) {
@@ -13,8 +14,10 @@ window.onbeforeunload = function () {
 }
 
 function init() {
+    checkResize();
+
     document.getElementById("backToTopBtn").style.opacity = 0;
-    document.getElementById('circle').style.opacity = 0;
+    // document.getElementById('circle').style.opacity = 0;
     EPPZScrollTo.scrollVerticalToElementById('introDiv', -10); // scroll to start at init
 
     var introLines = document.getElementById("introDiv").children; // get children
@@ -22,12 +25,12 @@ function init() {
       if (lineNumber < introLines.length && initAnimRunning) {
         introLines[lineNumber].style.opacity = 0;
         fadeIn(introLines[lineNumber]);
-        var time = introLines[lineNumber].offsetWidth*introLines[lineNumber].offsetHeight/20 + 500 + lineNumber*150;
+        // var time = introLines[lineNumber].offsetWidth*introLines[lineNumber].offsetHeight/20 + 500 + lineNumber*150;
+        var time = 2000 + (lineNumber>0)*1500;
         setTimeout(function() {showNextLine(lineNumber+1)}, time);
       }
       else {
         initAnimRunning = false;
-        showMenuItems();
       }
     }
     setTimeout(function() {showNextLine(0)}, 500);
@@ -48,20 +51,19 @@ function showFull() {
       fadeIn(introLines[i]);
     }
   }
-  showMenuItems();
-}
-
-function showMenuItems() {
-  fadeIn(document.getElementById('circle'));
 }
 
 // Makes back-to-top button appear if scrolled down and
 function scrollEvt() {
-    if (document.getElementById("introDiv").getBoundingClientRect().bottom < 100 && !backToTopShown) {
+    if (document.getElementById("introDiv").getBoundingClientRect().bottom < 500) {
+        checkShowfull();
+    }
+
+    if (document.getElementById("introDiv").getBoundingClientRect().bottom < 500 && !backToTopShown) {
         fadeIn(document.getElementById("backToTopBtn"));
         backToTopShown = true;
     }
-    else if (document.getElementById("introDiv").getBoundingClientRect().bottom > 100 && backToTopShown) {
+    else if (document.getElementById("introDiv").getBoundingClientRect().bottom > 500 && backToTopShown) {
         fadeOut(document.getElementById("backToTopBtn"));
         backToTopShown = false;
     }
@@ -84,7 +86,7 @@ function fadeIn(el, display){
 
     (function fade() {
       var val = parseFloat(el.style.opacity);
-      if (!((val += .02) > 1)) {
+      if (!((val += .05) > 1)) {
         el.style.opacity = val;
         requestAnimationFrame(fade);
       }
@@ -92,6 +94,7 @@ function fadeIn(el, display){
 }
 
 function goTo(id) {
+  checkShowfull();
   EPPZScrollTo.scrollVerticalToElementById(id, 100);
 }
 
@@ -146,4 +149,28 @@ function randomizeSections() {
   document.getElementById("circle").setAttribute("transform",rand_rot);
 }
 
-init();
+function goToTop() {
+  if (mobile) {
+    goTo('sidenav');
+  }
+  else {
+    goTo('introDiv');
+  }
+}
+
+function checkResize() {
+  if (window.innerWidth < 925) {
+    mobile = true;
+    document.getElementById("sidenav").className = "";
+    document.getElementById("main").className = "mainMob";
+    document.getElementById("backToTopBtn").style.left = '45%';
+  }
+  else {
+    mobile = false;
+    document.getElementById("sidenav").className = "sidenav";
+    document.getElementById("main").className = "main";
+    document.getElementById("backToTopBtn").style.left = '68.25%';
+  }
+}
+
+// init();

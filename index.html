@@ -2,13 +2,11 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="description" "Hi. I'm Pablo Cardenas. I make stuff. This is where you can check out the stuff I make.">
-		<title>Stuff by Pablo Cardenas Ramirez</title>
+		<meta name="description" "Hi. I'm Pablo Cárdenas. I make stuff. This is where you can check out the stuff I make.">
+		<title>Pablo Cárdenas</title>
 		<link rel="shortcut icon" href="assets/favicons.ico/favicon.ico">
 		<link rel="stylesheet" href="css/style_v1.css">
-		<link rel="stylesheet" href="css/circleStyles_v1.css">
 		<script src="js/EPPZScroll.js"></script>
-		<script src="js/content_v3.js"></script>
 		<script src="js/main_v1.js"></script>
 		<script type="application/ld+json">
 		{
@@ -29,103 +27,365 @@
 		  gtag('config', 'UA-123988123-1');
 		</script>
 	</head>
-
-	<body onload="randomizeSections()" onclick="checkShowfull()" onscroll="scrollEvt()">
-		<label class="roundBtn hidden" id="backToTopBtn" onclick="EPPZScrollTo.scrollVerticalToElementById('introDiv', 0)">
-			<span id="upBtn">Home</span></label>
-
-		<div id="introDiv" class="introTxt">
-			<div class="lineAnim largerTxt hidden"> Hi. I'm Pablo. I make stuff.</div>
-			<div class="lineAnim hidden"> I usually make stuff with computers and DNA. </div>
-			<div class="lineAnim hidden"> Sometimes I make stuff with violins and pencils. </div>
-			<div class="lineAnim hidden"> I like making stuff that helps
-				understand how living things work and how they cause disease. </div>
-			<div class="lineAnim hidden"> I also like writing text that makes you
-				think about how science works and music that makes you think about how
-				life works. </div>
-			<div class="lineAnim hidden">Here's where I show the stuff I make.</div>
-		</div>
-
-		<div id="menuContainer">
-			<div id="circle">
-				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="800px" height="800px" viewBox="0 0 800 800" enable-background="new 0 0 800 800" xml:space="preserve">
-				    <defs>
-				        <path id="circlePath" d=" M 400, 400
-																					m -300, 0
-																					a 300,300 0 0,1 600,0
-																					a 300,300 0 0,1 -600,0"/>
-				    </defs>
-				    <circle cx="400" cy="400" r="300" fill="none" id="circle"/>
-				    <g>
-				        <use xlink:href="#circlePath" fill="none"/>
-				        <text id="menuItms"></text>
-				    </g>
-				</svg>
+	<body onclick="checkShowfull()" onscroll="scrollEvt()" onresize="checkResize()">
+		<div class="sidenav" id="sidenav">
+			<div class="vertical-center">
+				<span class="profileTxt"><img alt="Pic" style="width:200px;height:200px;margin-left:12px;margin-right:12px;border-radius: 50%;" src="assets/img/In_lab.png"></span>
+				<br><br>
+				<span class="largerTxt">Pablo Cárdenas</span>
+				<br>infectious disease + synthetic biology
+				<br>wet lab + comp bio
+				<br>mentorship + metascience<br>
+				<br>
+				<p style="text-align:center">
+					<span class="profileTxt"><a title="GitHub" target="_blank" href="https://github.com/pablocarderam"><img alt="Github" style="width:35px;margin-left:5px;margin-right:5px;" src="assets/img/github_logo.png"></a></span></b>
+					<span class="profileTxt"><a title="Twitter" target="_blank" href="https://twitter.com/pcr_guy"><img alt="Twitter" style="width:35px;margin-left:5px;margin-right:5px;" src="assets/img/twitter_logo.png"></a></span></b>
+					<span class="profileTxt"><a title="LinkedIn" target="_blank" href="http://www.linkedin.com/in/pablocarderam"><img alt="LinkedIn" style="width:35px;margin-left:5px;margin-right:5px;" src="assets/img/linkedin_logo.png"></a></span></b>
+					<a title="ResearchGate" target="_blank" href="https://www.researchgate.net/profile/Pablo_Cardenas_Ramirez?cp=shp"><img style="width:35px;margin-left:5px;margin-right:5px;;" src="assets/img/researchgate.jpg" alt="Follow me on ResearchGate" /></a>
+					<span itemscope itemtype="https://schema.org/Person" class="profileTxt"><a title="ORCiD" itemprop="sameAs" content="https://orcid.org/0000-0001-7015-0512" href="https://orcid.org/0000-0001-7015-0512" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_128x128.png" style="width:35px;margin-left:5px;margin-right:5px;" alt="ORCID iD icon"></a></span></b>
+					<span class="profileTxt"><a title="LinkedIn" target="_blank" href="https://scholar.google.com/citations?hl=en&user=Iu05ZuQAAAAJ"><img alt="Google Scholar" style="width:35px;margin-left:5px;margin-right:5px;" src="assets/img/scholar.png"></a></span></b>
+					<span class="profileTxt"><a title="Email" target="_blank" href="mailto:pablocarderam@gmail.com"><img alt="Email" style="width:35px;margin-left:5px;margin-right:5px;" src="assets/img/mail_logo.png"></a></span></b>
+				</p>
+				<br>
+				<div class="align-left">
+					<span onclick="goTo('introDiv')"><a>About</a></span><br>
+					<span onclick="goTo('vision')"><a>Vision of science</a></span><br>
+					<span onclick="goTo('research')"><a>Research</a></span><br>
+					<span onclick="goTo('teaching')"><a>Teaching & mentorship</a></span><br>
+					<span onclick="goTo('contact')"><a>Contact & CV</a></span>
+				</div>
+				<br><br><br><br>
 			</div>
 		</div>
 
-		<script type="text/javascript"> init(); </script>
+		<label class="roundBtn hidden" id="backToTopBtn" onclick="goToTop()">
+			<span id="upBtn">^</span></label>
 
-		<div id="Profiles" class="text">
-			<span class="largerTxt"><h1>Profiles</h1></span>
+		<div class="main" id="main">
+			<div class="introTxt" id="introDiv">
+				<div class="lineAnim largerTxt hidden">¡Hola!</div>
+				<div class="lineAnim hidden"><p>
+ 					My work aims to undo inequalities in research affecting infectious
+					disease and global health.
+				</p></div><div class="lineAnim hidden"><p>
+					I do this by making computational and molecular tools to study
+					interactions across different scales of biology, ranging from the
+					molecular to the epidemiological.
+				</p></div><div class="lineAnim hidden"><p>
+					To support the scientific and non-scientific communities that make
+					this research possible, I work to foster open collaboration, effective
+					communication, and dedicated mentorship.
+				</p></div><div class="lineAnim hidden"><p>
+					I am currently a PhD student
+					at the <a target="_blank" href="https://be.mit.edu/">
+						MIT Department of Biological Engineering</a>, a coding fellow at
+						the <a target="_blank" href="https://bedatalab.github.io/">
+							BE Data Lab</a>, and a peer support coach at the
+							<a target="_blank" href="http://berefs.com/">
+								BE REFS</a>.
+				</p></div><div class="lineAnim hidden"><b>↓</b></div>
+			</div>
+			<script type="text/javascript"> init(); </script>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<br><br><br><br><br><br><br><br><br><br><br><br>
+
+			<br>
+			<a target="_blank" href="https://lab-squared.github.io/"><img id="vision" alt="labSquared" style="width:150px;height:150px;margin-left:12px;margin-right:12px;border-radius: 50%;" src="./assets/img/labSquared_logo_square.png" width="200px" /></a>
+			<br><br>
+
+			<div class="largerTxt">Vision of science</div>
+
+			<p>
+				Science is collaborative, context-embedded, and powerful, today more
+				than ever before. It thrives on diversity, transparency, and education.
+			</p>
+			<p>
+					<a target="_blank" href="https://lab-squared.github.io/">
+					<b>labSquared</b></a> is an ongoing exploration of how academic
+				research groups could be run following these ideals.
+				It is the handbook of an imaginary lab
+				experimenting with ways of running itself: a laboratory laboratory.
+			</p><p>
+				I am not the first to think of many —perhaps any— of these ideas.
+				But more importantly, the idea is to keep a repository, a
+				place to track, gather, and communicate these thoughts in—much like
+				science more broadly. These can be starting
+				points from which to trace courses in research, academic mentoring,
+				science policy, science communication, and many more.
+			</p>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+			<div class="largerTxt">Research</div>
+			<br>
+			<img id="research" alt="Synthetic biology" style="width:150px;height:150px;margin-left:12px;margin-right:12px;border-radius: 50%; background-color:white;" src="./assets/img/blue.png" width="200px" />
+			<br><br>
+			<p><b>Controlling expression and genetic circuits</b></p>
+			<p>
+				Our ability to understand and control disease depends on our ability to
+				control the genes underlying it. Synthetic biology allows us to
+				repurpose systems with unrelated biological functions into tools for
+				manipulating gene expression.
+			</p><p>
+				My Ph.D. research with the
+				<a target="_blank" href="https://web.mit.edu/nileslab/">Niles Lab</a> at
+				MIT focuses on developing these kinds of tools for use in the malaria
+				parasite, <i>Plasmodium falciparum</i>. By combining recombinant
+				gene expression systems, deep learning, and genetic screening, I
+				try to understand how parasites control gene expression and how we can
+				build synthetic ways of doing so. [in prep.]
+			</p><p>
+				Besides building tools to manipulate gene expression, it is important to
+				understand how they function together. Genetic circuits are
+				context-dependent, and emergent behaviors such as resource sharing
+				complicate their use. In collaboration with the
+				<a target="_blank" href="https://scripts.mit.edu/~ddv/index.php">
+				Del Vecchio lab</a> at MIT, I helped assemble and model genetic
+				devices to reduce these effects in model gene circuits [in prep.].
+			</p><p>
+				Finally, I have helped build and model gene circuits for applications
+				in new treatment strategies for bacterial disease, both as a member of
+				<a target="_blank" href="https://eligo.bio/">
+				Eligo Bioscience</a> and in collaboration with the
+				<a target="_blank" href="https://collinslab.mit.edu/">Collins lab</a> at
+				MIT [in prep.].
+			</p>
+
+			<br><br>
+			<img id="research" alt="Functional genomics" style="width:150px;height:150px;margin-left:12px;margin-right:12px;border-radius: 50%; background-color:white;" src="./assets/img/malaria.png" width="200px" />
+			<br><br>
+			<p><b>Probing pathogen gene function</b></p>
+			<p>
+				We can use engineered control of gene expression to tease apart how
+				pathogens live and die. Armed with this knowledge, we can approach drug
+				and vaccine design in a more informed matter.
+			</p><p>
+				Despite still killing more than 400,000 people a year, 70% of
+				<i>P. falciparum</i> genes have unknown or hypothetical functions. To
+				remedy this, I help develop
+				<a target="_blank" href="http://genetargeter.mit.edu/">computational
+					tools to design gene editing</a> and assay gene function at a massive
+				scale as a part of the
+				<a target="_blank" href="https://web.mit.edu/nileslab/">Niles Lab</a>
+				[in prep.]. In addition, I use statistical approaches to help interpret
+				protein-compound interactions in order to establish potential drug
+				targets and lead compounds [in prep.].
+			</p><p>
+				Another situation where we need a better understanding of gene function
+				is bacterial persistence, the phenomenon in which bacteria
+				stochastically enter a metabolic state that allows them to survive an
+				antibiotic, despite being genetically susceptible. As a part of the
+				<a target="_blank" href="https://paulsson.med.harvard.edu/">Paulsson
+					Lab</a> at Harvard Medical School, I helped use microfluidics and live
+				cell microscopy to screen gene function related to persistence in
+				<i>Escherichia coli</i>.
+			</p>
+
+			<br><br>
+			<img id="research" alt="Evolution" style="width:150px;height:150px;margin-left:12px;margin-right:12px;border-radius: 50%; background-color:white;" src="./assets/img/evo.png" width="200px" />
+			<br><br>
+			<p><b>Modeling pathogen evolution</b></p>
+			<p>
+				One of the most clinically relevant instances of evolutionary biology is
+				resistance to treatment in a pathogen. Mathematical and
+				computational models are useful to study evolution as they allow us to
+				run virtual experiments that would otherwise be too large or too long to
+				realistically do.
+				<!-- By modeling biological systems, we can explore
+				mechanistic relationships, create new hypotheses, and test drive
+				possible interventions against infectious diseases. -->
+			</p><p>
+				The most common instance of resistance to treatment is
+				antibiotic resistance in bacteria. Resistant bacteria in a biofilm may
+				incur in fitness costs, and yet the benefits of resistance can often be
+				shared among its neighbors. As a part of
+				<a target="_blank" href="https://mtbi.asu.edu/">MTBI at Arizona State
+					University</a>, I helped develop
+				<a target="_blank" href="https://mtbi.asu.edu/content/cheating-cheaters-spatial-dynamics-evolutionary-stability-antibiotic-resistance">
+					a 3-D, spatially explicit agent-based model of bacterial resistance
+				</a>, to study spatial dynamics and competition within biofilms that can
+				be harnessed to reduce resistance.
+			</p><p>
+				Phage therapy is an intriguing alternative to antibiotics, but is also
+				subject to evolution of bacterial resistance. Although phage are capable
+				of evolving too, this coevolution can be difficult to achieve.
+				To make phage into effective therapeutic agents, we need ways of
+				inhibiting bacterial evolution of resistance. At the
+				<a target="_blank" href="https://cimic.uniandes.edu.co/"> CIMIC
+				  lab</a> at Universidad de los Andes, I helped develop and validate
+				<a target="_blank" href="https://doi.org/10.3390/v11020188">a dynamical
+					model of phage therapy showing the potential of combining phage
+				cocktails and antibiotics</a>, even when the antibiotic is ineffective
+				by itself.
+			</p><p>
+				Of course, evolution also occurs beyond the level of a single host. To
+				study scenarios of evolution at the epidemiological scale, I developed
+				<a target="_blank" href="https://github.com/pablocarderam/opqua">
+					a computational framework to stochastically model genetically evolving
+					pathogens spreading through populations of hosts</a>. With the help of
+				an international work group of researchers in Colombia, USA, and Europe,
+				we are applying these kinds of models to study the emergence and spread
+				of antimalarial resistance, and the genomic epidemiology of malaria
+				along the Colombian Pacific coast.
+			</p>
+
+			<!-- <br><br>
+			<img id="research" alt="Epidemiology" style="width:150px;height:150px;margin-left:12px;margin-right:12px;border-radius: 50%; background-color:white;" src="./assets/img/epi.png" width="200px" />
+			<br><br>
+			<p><b>Spatial epidemiology of tropical disease</b></p>
+			<p>
+				Science is collaborative, context-embedded, and powerful, today more
+				than ever before. It thrives on diversity, transparency, and education.
+			</p> -->
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+			<br>
+			<img id="teaching" alt="BE Data Lab" style="width:150px;height:150px;margin-left:12px;margin-right:12px;border-radius: 50%; background-color:white;" src="./assets/img/board.png" width="200px" />
+			<br><br>
+			<div class="largerTxt">Teaching & mentorship</div>
+
+			<br><b>Data Fellow – <a target="_blank" href="https://bedatalab.github.io/">
+				MIT Biological Engineering Data Lab</a></b> <br>(Spring 2020++)<br>
+			<p>
+				Providing 1-on-1 coaching to undergraduates, graduate students, and
+				postdocs at MIT for designing and executing projects in computational
+				biology and biological data analysis. Providing language-specific
+				training and support in Python, MATLAB, R, and cluster computing.
+			</p>
+			<br><b>Member – <a target="_blank" href="http://berefs.com/">
+				MIT Biological Engineering REFS</a></b> <br>(Spring 2019++)<br>
+			<p>
+				We provide 1-on-1 confidential conflict coaching for peer graduate
+				students at the MIT Department of Biological Engineering. We identify
+				points of stress in the Ph.D. track and work with the MIT BE Graduate
+				Student Board to improve faculty mentorship and the graduate experience.
+			</p>
+			<br><b>Teaching Assistant – <a target="_blank" href="https://be.mit.edu/">
+				MIT Biological Engineering</a></b> <br>(Fall 2019)<br>
+			<p>
+				Part of the teaching team for the introductory graduate course
+				<a target="_blank" href="https://ocw.mit.edu/courses/biological-engineering/20-420j-biomolecular-kinetics-and-cellular-dynamics-be-420j-fall-2004/">
+					20.420 - Principles of Molecular Bioengineering</a>, taught by Profs.
+				Ernest Fraenkel and Alan Jasanoff. Topics include reaction kinetics
+				modeling, protein thermodynamics and computational prediction, and
+				systems-level models of metabolism.
+				Assisted with designing and grading assignments and exams, providing
+				review lecture sessions, and providing one-on-one tutoring for 40
+				students in the Biological Engineering, Chemical Engineering, and Health
+				Sciences and Technology graduate programs. Also conducted a programming
+				bootcamp session, with materials available <a target="_blank" href="https://drive.google.com/drive/folders/1ABEQuON7C-uvLfHw2TXtIhnLG9X7ZNsM">
+					here</a>.
+			</p>
+			<br><b>Teaching Assistant – <a target="_blank" href="https://ingbiomedica.uniandes.edu.co/">
+				Uniandes Biomedical Engineering</a></b> <br>(Spring, Fall 2016)<br>
+			<p>
+				Part of the teaching team for the second-year undergraduate courses
+				Quantitative Human Physiology I and II, taught by Prof. Juan M.
+				Cordovez. Topics include human anatomy and systems physiology as well as
+				mathematical modeling of physiological processes.
+				Assisted with designing and grading assignments and exams, providing
+				review lecture sessions, and providing one-on-one tutoring for 100
+				students in the Biomedical Engineering undergraduate program. Also
+				taught two main lectures during professor absences.
+			</p>
+			<br><b>Teaching Assistant – <a target="_blank" href="https://decanaturadeestudiantes.uniandes.edu.co/">
+				Uniandes Student Affairs</a></b> <br>(Fall 2015)<br>
+			<p>
+				Part of the teaching team for
+				<a target="_blank" href="https://decanaturadeestudiantes.uniandes.edu.co/index.php/es/practica-social">
+					Social Practice</a>, an undergraduate course and outreach program
+				taught by instructors David Parga and María del Pilar Pérez.
+				Assisted with training, guiding, and evaluating 60 Uniandes
+				undergraduate students of all majors and years serving as academic
+				tutors for low-income high school students in Bogotá, Colombia.
+			</p>
+			<br><b>Teaching Assistant – <a target="_blank" href="https://cienciasbiologicas.uniandes.edu.co/">
+				Uniandes Biological Sciences</a></b> <br>(Spring 2015)<br>
+			<p>
+				Part of the teaching team for the Parasitology Laboratory course, a
+				second year undergraduate course taught by Prof. Camila González and
+				instructor Laura Tamayo. Topics included anatomy, physiology, and cell
+				biology of diverse human and animal parasites and tropical diseases,
+				from roundworms to viral fevers.
+				Assisted by providing review sessions and tutoring, helping develop and
+				grade assignments, and preparing demonstrative microscopy slides.
+			</p>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+			<br>
+			<img id="contact" alt="Contact" style="width:100px;height:100px;margin-left:12px;margin-right:12px;border-radius: 50%; background-color:white;" src="./assets/img/mail_logo.png" width="200px" />
+			<br><br>
+
+			<div class="largerTxt">Contact & CV</div>
+			<p>
+				You are welcome to
+			</p>
+			<ul>
+				<li>
+					hack my coding projects on
+				<a target="_blank" href="https://github.com/pablocarderam">
+					GitHub</a></li>
+
+				<li>
+					engage with my science views on
+				<a target="_blank" href="https://twitter.com/pcr_guy">
+					Twitter</a></li>
+
+				<li>follow my research on
+				<a target="_blank" href="https://www.linkedin.com/in/pablocarderam/">
+					LinkedIn</a>,
+				<a target="_blank" href="https://www.researchgate.net/profile/Pablo_Cardenas_R">
+					ResearchGate</a>,
+				<a target="_blank" href="https://scholar.google.com/citations?hl=en&user=Iu05ZuQAAAAJ">
+					Google Scholar</a>, and
+				<a target="_blank" href="https://orcid.org/0000-0001-7015-0512">
+					ORCiD</a></li>
+
+				<li><a target="_blank" href="assets/stuff/PabloCR_CV_Science.pdf" download>
+					view my CV</a></li>
+
+				<li>reach out to
+					<a target="_blank" href="mailto:pablocarderam@gmail.com">
+						pablocarderam@gmail.com</a></li>
+			</ul>
+			<p>
+				I love collaborating on projects or just hearing questions,
+				suggestions, or thoughts!
+			</p>
+
 			<br><br><br><br>
-			<p>
-				<b><span class="profileTxt"><a target="_blank" href="https://github.com/pablocarderam"><img alt="Github" style="width:96px;margin-left:12px;margin-right:12px;" src="assets/img/github_logo.png"></a></span></b>
-				<b><span class="profileTxt"><a target="_blank" href="https://soundcloud.com/pablo-c-rdenas"><img alt="Soundcloud" style="width:96px;margin-left:12px;margin-right:12px;" src="assets/img/soundcloud_logo.png"></a></span></b>
-				<b><span class="profileTxt"><a target="_blank" href="https://twitter.com/pcr_guy"><img alt="Twitter" style="width:96px;margin-left:12px;margin-right:12px;" src="assets/img/twitter_logo.png"></a></span></b>
-			</p>
-			<br>
-			<p>
-				<a title="Follow me on ResearchGate" target="_blank" href="https://www.researchgate.net/profile/Pablo_Cardenas_Ramirez?cp=shp"><img style="width:96px;margin-left:12px;margin-right:12px;" src="assets/img/researchgate.jpg" alt="Follow me on ResearchGate" /></a>
-				<b><span class="profileTxt"><a target="_blank" href="http://www.linkedin.com/in/pablocarderam"><img alt="LinkedIn" style="width:96px;margin-left:12px;margin-right:12px;" src="assets/img/linkedin_logo.png"></a></span></b>
-				<b><span itemscope itemtype="https://schema.org/Person" class="profileTxt"><a itemprop="sameAs" content="https://orcid.org/0000-0001-7015-0512" href="https://orcid.org/0000-0001-7015-0512" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_128x128.png" style="width:96px;margin-left:12px;margin-right:12px;" alt="ORCID iD icon"></a></span></b>
-			</p>
-			<br>
-			<p>
-				<b><span class="profileTxt"><a target="_blank" href="mailto:pablocarderam@gmail.com"><img alt="Email" style="width:96px;margin-left:12px;margin-right:12px;" src="assets/img/mail_logo.png"></a></span></b>
-				<b><span class="profileTxt"><a target="_blank" href="assets/stuff/PabloCR_CV_Science.pdf" download><img alt="Download CV" style="width:96px;margin-left:12px;margin-right:12px;" src="assets/img/cv-icon.png"></a></span></b>
-			</p>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<p>
-				<b><span class="profileTxt"><img alt="Pic" style="width:128px;height:128px;margin-left:12px;margin-right:12px;border-radius: 50%;" src="assets/img/Pablo_headshot_stolenlens_tongue.png"></span></b>
-			</p>
+				*
+			<br><br><br><br>
+
+			<div id="Attributions">
+				<p>
+					This webpage's content is licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+					<br><br>
+					<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />
+				</p>
+				<br>
+				<p>
+					Its code is licensed under an <a target="_blank" href="https://opensource.org/licenses/MIT">MIT License</a> and can be found <a target="_blank" href="https://github.com/pablocarderam/pablocarderam.github.io">on Github</a>.
+				</p>
+				<a target="_blank" href="https://opensource.org/"><img alt="Long live open source!" width="80px" src="assets/img/os.png"></a>
+				<br>
+				<p>
+					It was made by Pablo Cárdenas, who likes to see his name
+					written with accent marks. However, this probably confuses search
+					engines. So hi Google, I'm Pablo Cardenas. Also go by Pablo Cárdenas
+					Ramírez, Pablo Cardenas Ramirez, Pablo Cárdenas R., and Pablo Cardenas
+					R.
+				</p>
+				<p>
+					Many thanks to Bianca Lepe and Emilia Cárdenas for pictures.
+				</p>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<p>
+					<span class="profileTxt"><img alt="Pic" style="width:150px;height:150px;margin-left:12px;margin-right:12px;border-radius: 50%;" src="assets/img/Pablo_headshot_stolenlens_tongue.png"></span>
+				</p>
+			</div>
+
+			<div class="tailer"></div>
 		</div>
-
-		<div id="section_0"></div>
-		<div id="section_1"></div>
-		<div id="section_2"></div>
-		<div id="section_3"></div>
-		<div id="section_4"></div>
-
-		<br><br><br>
-
-		<div id="Attributions">
-			<p>
-				This webpage's content is licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-				<br><br>
-				<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />
-			</p>
-			<br>
-			<p>
-				Its code is licensed under an <a target="_blank" href="https://opensource.org/licenses/MIT">MIT License</a> and can be found <a target="_blank" href="https://github.com/pablocarderam/pablocarderam.github.io">on Github</a>.
-			</p>
-			<a target="_blank" href="https://opensource.org/"><img alt="Long live open source!" width="80px" src="assets/img/os.png"></a>
-			<br>
-			<p>
-				It was made by Pablo Cárdenas Ramírez, who likes to see his name
-				written with accent marks. However, this probably confuses Google.
-				So hi Google, I'm Pablo Cardenas Ramirez. Also go by Pablo Cárdenas,
-				Pablo Cardenas, Pablo Cárdenas R., and Pablo Cardenas R.
-			</p>
-		</div>
-
-		<div class="tailer"></div>
 	</body>
 </html>
